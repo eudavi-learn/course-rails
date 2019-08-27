@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+body {
+	font-family: Poppins, sans-serif;
+	background-color: #CAA8F5;
+}
+
+label {
+	padding-top: 10px;
+}
+
+.register-wrapper {
+	max-width: 500px;
+	margin: 0 auto;
+
+}
+
+.register-monster {
+	padding: 25px;
+	margin-top: 15px;
+	background-color: #9984D4;
+	color: white;
+}
+
+.submit-monster {
+	padding-top: 15px;
+}
+
+.list-monsters-wrapper {
+	margin-top: 50px !important;
+	margin-bottom: 50px !important;
+	padding: 50px !important;
+	border: 1px solid black;
+	border-radius: 10px;
+}
+
+.show-monster-wrapper {
+	margin-top: 50px !important;
+	margin-bottom: 50px !important;
+	max-width: 500px;
+	margin: 0 auto;
+	align-items: center;
+}
+
+.show-monster-wrapper-2 {
+	margin-top: 5em;
+	margin-bottom: 5em;
+	margin: 50px auto;
+}
+
+.details-monsters-wrapper {
+	border: 1px #730071;
+	border-radius: 3px;
+	padding: 15px;
+	margin-top: 15px;
+}
+
+.monster {
+	margin-top: 15px;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+
+.monster-img {
+	height: 60px;
+	width: 100%;
+	background-color: #CAA8F5;
+	border: 1;
+	border-radius: 3px;
+}
+
+.title-monster {
+	color: #606266;
+	font-size: .9375rem;
+}
+
+.title-monster-show {
+	color: #606266;
+	font-size: 1.25rem;
+}
+
+.details-monster { 
+	font-size: .625rem;
+	color: #8898aa;
+}
+
+.details-monster-2 {
+	margin-top: 60px !important;
+}
+
+.actions {
+	margin-top: 60px !important;
+}
+
+.show-btn {
+	margin-left: 60px;
+}
+
+.back-action {
+	padding: 10px;
+}
+
+.monster-info {
+	label {
+		color: #525f7f;
+    font-size: .8125rem;
+    font-weight: 600;
+    margin-left: 2em;
+	}
+
+	span {
+	  color: #525f7f;
+    font-size: .8125rem;
+    margin-left: 5em;
+	}
+}

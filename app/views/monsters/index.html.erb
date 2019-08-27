@@ -1,0 +1,59 @@
+<div class="container card list-monsters-wrapper">
+  <h1 class="title text-center"> Listagem dos Monstros </h1>
+  <div class="details-monsters-wrapper">
+    <% @monsters.each do |monster| %>
+    <hr/>
+    <div class="row">
+      <div class="col-md-1 col-sm-12">
+        <div class="monster">
+          <img src="<%= monster.image %>" class='monster-img'>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="col-md-12">
+          <div class="title-monster">
+            <%= monster.name %>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="details-monster">
+            Nv <%= monster.level %> HP <%= monster.hp %>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1">
+        <div class="details-monster">
+          <div class="details-monster-2">
+            <%= monster.race %> 
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1">
+        <div class="details-monster">
+          <div class="details-monster-2">
+            <%= monster.size %> 
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="details-monster">
+          <div class="details-monster-2">
+            Speed: <%= monster.speed %> 
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="actions">
+          <%= link_to 'Mostrar', show_monster_path(monster), class: 'show-btn' %>
+          <%= link_to 'Deletar', destroy_monster_path(monster), method: :delete, class: 'show-btn' %>
+        </div>
+      </div>
+    </div>
+    <hr/>
+  <% end %>
+
+  <div class="add-monster">
+    <%= link_to 'Adicionar Monstro', new_monster_path, class: 'btn btn-outline-primary' %>
+  </div>
+  </div>
+</div>

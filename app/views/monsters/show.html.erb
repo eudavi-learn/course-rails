@@ -1,0 +1,98 @@
+
+<div class="show-monster-wrapper">
+	<div class="container card">
+		<label class="title-monster-show">
+			<%= @monster.name %>
+			<hr/>
+		</label>
+		<div class="row">
+			<div class="show-monster-wrapper-2">
+				<div class="col-md-2">
+					<img src="<%= @monster.image %>" />
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="monster-info">
+					<div class="row">
+						<div class="col-md-6">
+							<label> Nome </label>
+							<span class="text-right"> <%= @monster.name %> </span>
+							<hr/>
+						</div>
+						<div class="col-md-6">
+							<label> Ataque </label>
+							<span class="text-right"> <%= @monster.attack %> </span>
+							<hr/>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-6">
+							<label> Def </label>
+							<span> <%= @monster.defense %> </span>
+							<hr/>
+						</div>
+						<div class="col-md-6">
+							<label> Nivel </label>
+							<span> <%= @monster.level %> </span>
+							<hr/>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<label> Mdef </label>
+							<span> <%= @monster.mdef %> </span>
+							<hr/>
+						</div>
+						<div class="col-md-6">
+							<label> Tamanho </label>
+							<span> <%= @monster.size %> </span>
+							<hr/>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-6">
+							<label> HP </label>
+							<span> <%= @monster.hp %> </span>
+							<hr/>
+						</div>
+						<div class="col-md-6">
+							<label> Raça </label>
+							<span> <%= @monster.race %> </span>
+							<hr/>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-6">
+							<label> SP </label>
+							<span> <%= @monster.sp %> </span>
+							<hr/>
+						</div>
+						<div class="col-md-6">
+							<label> Velocidade </label>
+							<span> <%= @monster.speed %> </span>
+							<hr/>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+								<label> Precisão </label>
+								<span> <%= @monster.hit %> </span>
+								<hr/>
+						</div>
+						<div class="col-md-6">
+							<label> Esquiva </label>
+							<span> <%= @monster.flee %> </span>
+							<hr/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="back-action">
+			<%= link_to 'Voltar', root_path, class: 'btn btn-primary' %>
+		</div>
+	</div>
+</div>

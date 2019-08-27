@@ -1,0 +1,66 @@
+<%= form_with(model: monster, local: true, url: create_monster_path) do |form| %>
+  <div class="register-wrapper">
+		<div class="card register-monster">
+			<h1 class="title">Cadastro de Monstros</h1>
+				<div class="row">
+					<div class="col-md-12">
+						<label for="monster-image">Imagem</label>
+						<%= form.text_field :image, class: 'form-control', placeholder: 'Exemplo: https://static.ragnaplace.com/bro/mob/1002.gif', id: 'monster-image' %>
+					</div>
+					<div class="col-md-12">
+						<label for="monster-name">Nome</label>
+						<%= form.text_field :name, class: 'form-control', id: 'monster-name' %>
+					</div>
+					<div class="col-md-6">
+						<label for="monster-attack">Ataque</label>
+						<%= form.text_field :attack, class: 'form-control', id: 'monster-attack' %>
+					</div>
+					<div class="col-md-6">
+						<label for="monster-defense">Defesa</label>
+						<%= form.text_field :defense, class: 'form-control', id: 'monster-defense' %>
+					</div>
+					<div class="col-md-6">
+						<label for="monster-mdef">Defesa Mágica</label>
+						<%= form.text_field :mdef, class: 'form-control', id: 'monster-mdef' %>
+					</div>
+					<div class="col-md-6">
+						<label for="monster-level">Level</label>
+						<%= form.number_field :level, class: 'form-control', id: 'monster-level' %>
+					</div>
+						<div class="col-md-6">
+						<label for="monster-race">Raça</label>
+						<%= form.text_field :race, class: 'form-control', id: 'monster-race' %>
+					</div>
+					<div class="col-md-6">
+						<label for="monster-size">Tamanho</label>
+						<%= form.text_field :size, class: 'form-control', id: 'monster-size' %>
+					</div>
+					<div class="col-md-4">
+						<label for="monster-hp">HP</label>
+						<%= form.text_field :hp, class: 'form-control', id: 'monster-hp' %>
+					</div>
+					<div class="col-md-4">
+						<label for="monster-sp">SP</label>
+						<%= form.text_field :sp, class: 'form-control', id: 'monster-sp' %>
+					</div>
+					<div class="col-md-4">
+						<label for="monster-speed">Velocidade</label>
+						<%= form.text_field :speed, class: 'form-control', id: 'monster-speed' %>
+					</div>
+					<div class="col-md-6">
+						<label for="monster-hit">Precisão</label>
+						<%= form.text_field :hit, class: 'form-control', id: 'monster-hit' %>
+					</div>
+					<div class="col-md-6">
+						<label for="monster-speed">Esquiva</label>
+						<%= form.text_field :flee, class: 'form-control', id: 'monster-flee' %>
+					</div>
+					<div class="col-md-12 submit-monster text-center">
+						<%= form.submit 'Cadastrar Monstro', class: 'btn btn-info btn-lg btn-block' %>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+  </div>
+<% end %>

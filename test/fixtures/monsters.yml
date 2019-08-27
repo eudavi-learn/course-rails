@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  image: MyString
+  name: MyString
+  defense: MyString
+  attack: MyString
+  mdef: MyString
+  level: MyString
+  race: MyString
+  size: MyString
+  hp: MyString
+  sp: MyString
+  speed: MyString
+  hit: MyString
+  flee: MyString
+
+two:
+  image: MyString
+  name: MyString
+  defense: MyString
+  attack: MyString
+  mdef: MyString
+  level: MyString
+  race: MyString
+  size: MyString
+  hp: MyString
+  sp: MyString
+  speed: MyString
+  hit: MyString
+  flee: MyString
