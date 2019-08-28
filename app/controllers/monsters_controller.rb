@@ -1,12 +1,13 @@
 class MonstersController < ApplicationController
-	before_action :set_monster, only: [:show, :destroy, :update]
+	before_action :set_monster, only: [:show, :destroy, :update, :edit]
 
 	def new
 		@monster = Monster.new
 	end
 
 	def index
-		@monsters = Monster.all
+		@q = Monster.ransack(params[:q])
+    @monsters = @q.result(distinct: true)
 	end
 
 	def create
@@ -17,6 +18,13 @@ class MonstersController < ApplicationController
 		end
 	end
 
+	def update
+		if @monster.update_attributes(monster_params)
+			redirect_to root_path
+		end
+	end
+
+	def edit; end
 	def show; end
 
 	def destroy

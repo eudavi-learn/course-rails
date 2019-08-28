@@ -1,5 +1,18 @@
 <div class="container card list-monsters-wrapper">
   <h1 class="title text-center"> Listagem dos Monstros </h1>
+  <div class="search-monster">
+    <label> Buscar Monstro: </label>
+    <%= search_form_for @q do |f| %>
+      <div class="row">
+        <div class="col-md-4">
+          <%= f.search_field :name_eq, placeholder: 'Nome do Monstro...', class: 'form-control' %>
+          <%= f.submit 'Buscar', class: 'btn btn-primary search-btn' %>
+          <%= link_to 'Reset', root_path, class: 'btn btn-info search-btn' %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  
   <div class="details-monsters-wrapper">
     <% @monsters.each do |monster| %>
     <hr/>
@@ -35,17 +48,18 @@
           </div>
         </div>
       </div>
-      <div class="col-md-2">
+      <div class="col-md-1">
         <div class="details-monster">
           <div class="details-monster-2">
             Speed: <%= monster.speed %> 
           </div>
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-5">
         <div class="actions">
-          <%= link_to 'Mostrar', show_monster_path(monster), class: 'show-btn' %>
-          <%= link_to 'Deletar', destroy_monster_path(monster), method: :delete, class: 'show-btn' %>
+          <%= link_to 'Mostrar', show_monster_path(monster), class: 'btn btn-info' %>
+          <%= link_to 'Editar', edit_monster_path(monster), class: 'btn btn-secondary' %>
+          <%= link_to 'Deletar', destroy_monster_path(monster), method: :delete, class: 'btn btn-danger' %>
         </div>
       </div>
     </div>
